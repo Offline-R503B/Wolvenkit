@@ -234,6 +234,7 @@ namespace WolvenKit.ViewModels.Editor
 
 
             await ((IRefreshable)CurrentNode).RefreshAsync();
+            _notificationService.Success($"Asset Browser is initialized");           
         }
 
         /// <summary>
@@ -274,7 +275,6 @@ namespace WolvenKit.ViewModels.Editor
 
             IsLoaded = true;
 
-            _notificationService.Success($"Asset Browser is initialized");
             LoadVisibility = Visibility.Collapsed;
 
             _ = InitializeCurrentNodeAsync(RootNode);
