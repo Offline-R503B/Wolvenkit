@@ -118,8 +118,8 @@ namespace WolvenKit.Functionality.Initialization
         {
             try
             {
-                await ShellInnerInit();
                 ThemeInnerInit();
+                await ShellInnerInit();
             }
             catch (Exception e)
             {
